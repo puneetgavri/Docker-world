@@ -210,5 +210,3 @@ Docker helps isolate workloads but must be hardened for true security. These bes
   ```
 
 ***
-
-Let me know if you'd like specific code snippets, security profiles, or additional recommendations for your own Docker setup.
