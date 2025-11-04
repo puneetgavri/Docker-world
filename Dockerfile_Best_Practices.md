@@ -108,6 +108,13 @@
 * **Avoid secrets in Dockerfile:**
 
   * Use build-time secrets (`--secret id=mysecret,src=secret.txt`) or environment variables.
+  ```dockerfile
+  FROM alpine:latest
+
+  # Use the secret during a RUN command; the secret is mounted temporarily
+  RUN --mount=type=secret,id=mysecret cat /run/secrets/mysecret > /tmp/secret_output.txt
+  ```
+
 * **Use distroless images for production:**
   Removes shell, `apt`, and other unnecessary tools.
 * **Regularly scan images:**
